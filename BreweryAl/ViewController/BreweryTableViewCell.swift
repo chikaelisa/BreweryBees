@@ -11,7 +11,7 @@ class BreweryTableViewCell: UITableViewCell {
 
     static let identifier = "BreweryTableViewCell"
     
-    let model = ["Ademir", "Vila Bar", "Stout", "Cabaré", "As mina", "10 Shots"]
+   // let model = ["Ademir", "Vila Bar", "Stout", "Cabaré", "As mina", "10 Shots"]
     
     @IBOutlet weak var imageBrew: UIImageView!
     @IBOutlet weak var nameBrew: UILabel!
@@ -43,7 +43,7 @@ class BreweryTableViewCell: UITableViewCell {
     @IBAction func isFavoriteAction(_ sender: Any) {
     }
     
-    func configureCell(breweModel: String) {
+    func configureCell(with breweModel: String) {
         nameBrew.text = breweModel
         if var firstChar = breweModel.first{
             firstChar = Character(firstChar.lowercased())
