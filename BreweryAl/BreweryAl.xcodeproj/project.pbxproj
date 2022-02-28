@@ -16,6 +16,8 @@
 		16AD8D4927CCFE5B00D1E58F /* BreweryAlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD8D4827CCFE5B00D1E58F /* BreweryAlTests.swift */; };
 		16AD8D5327CCFE5B00D1E58F /* BreweryAlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD8D5227CCFE5B00D1E58F /* BreweryAlUITests.swift */; };
 		16AD8D5527CCFE5B00D1E58F /* BreweryAlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD8D5427CCFE5B00D1E58F /* BreweryAlUITestsLaunchTests.swift */; };
+		16AD8D6827CD15F200D1E58F /* ContentsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AD8D6727CD15F200D1E58F /* ContentsStoryboard.storyboard */; };
+		16AD8D6A27CD16AF00D1E58F /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD8D6927CD16AF00D1E58F /* ContentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		16AD8D4E27CCFE5B00D1E58F /* BreweryAlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreweryAlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AD8D5227CCFE5B00D1E58F /* BreweryAlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryAlUITests.swift; sourceTree = "<group>"; };
 		16AD8D5427CCFE5B00D1E58F /* BreweryAlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryAlUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		16AD8D6727CD15F200D1E58F /* ContentsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentsStoryboard.storyboard; sourceTree = "<group>"; };
+		16AD8D6927CD16AF00D1E58F /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentsViewController.swift; path = View/Storyboard/ContentsViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 			children = (
 				16AD8D3C27CCFE5B00D1E58F /* LaunchScreen.storyboard */,
 				16AD8D3727CCFE5900D1E58F /* Main.storyboard */,
+				16AD8D6727CD15F200D1E58F /* ContentsStoryboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 		16AD8D6527CD030300D1E58F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				16AD8D6927CD16AF00D1E58F /* ContentsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				16AD8D3E27CCFE5B00D1E58F /* LaunchScreen.storyboard in Resources */,
 				16AD8D3B27CCFE5B00D1E58F /* Assets.xcassets in Resources */,
 				16AD8D3927CCFE5900D1E58F /* Main.storyboard in Resources */,
+				16AD8D6827CD15F200D1E58F /* ContentsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AD8D6A27CD16AF00D1E58F /* ContentsViewController.swift in Sources */,
 				16AD8D3627CCFE5900D1E58F /* ViewController.swift in Sources */,
 				16AD8D3227CCFE5900D1E58F /* AppDelegate.swift in Sources */,
 				16AD8D3427CCFE5900D1E58F /* SceneDelegate.swift in Sources */,
