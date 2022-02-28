@@ -18,6 +18,8 @@
 		16AD8D5527CCFE5B00D1E58F /* BreweryAlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD8D5427CCFE5B00D1E58F /* BreweryAlUITestsLaunchTests.swift */; };
 		16AD8D6827CD15F200D1E58F /* ContentsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AD8D6727CD15F200D1E58F /* ContentsStoryboard.storyboard */; };
 		16AD8D6A27CD16AF00D1E58F /* ContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD8D6927CD16AF00D1E58F /* ContentsViewController.swift */; };
+		16AD8D6F27CD1A8300D1E58F /* BreweryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AD8D6D27CD1A8300D1E58F /* BreweryTableViewCell.swift */; };
+		16AD8D7027CD1A8300D1E58F /* BreweryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16AD8D6E27CD1A8300D1E58F /* BreweryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		16AD8D5227CCFE5B00D1E58F /* BreweryAlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryAlUITests.swift; sourceTree = "<group>"; };
 		16AD8D5427CCFE5B00D1E58F /* BreweryAlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryAlUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		16AD8D6727CD15F200D1E58F /* ContentsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContentsStoryboard.storyboard; sourceTree = "<group>"; };
-		16AD8D6927CD16AF00D1E58F /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentsViewController.swift; path = View/Storyboard/ContentsViewController.swift; sourceTree = SOURCE_ROOT; };
+		16AD8D6927CD16AF00D1E58F /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentsViewController.swift; path = ViewController/ContentsViewController.swift; sourceTree = SOURCE_ROOT; };
+		16AD8D6D27CD1A8300D1E58F /* BreweryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryTableViewCell.swift; sourceTree = "<group>"; };
+		16AD8D6E27CD1A8300D1E58F /* BreweryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreweryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,7 @@
 		16AD8D2527CCFE5900D1E58F = {
 			isa = PBXGroup;
 			children = (
-				16AD8D6527CD030300D1E58F /* ViewController */,
+				16AD8D6B27CD199100D1E58F /* ViewController */,
 				16AD8D6227CD000E00D1E58F /* Model */,
 				16AD8D6127CCFFF100D1E58F /* View */,
 				16AD8D3027CCFE5900D1E58F /* BreweryAl */,
@@ -135,7 +139,7 @@
 		16AD8D6127CCFFF100D1E58F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				16AD8D6427CD025100D1E58F /* Xib */,
+				16AD8D6C27CD19F800D1E58F /* Xib */,
 				16AD8D6327CD022B00D1E58F /* Storyboard */,
 			);
 			path = View;
@@ -158,19 +162,21 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		16AD8D6427CD025100D1E58F /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Xib;
-			sourceTree = "<group>";
-		};
-		16AD8D6527CD030300D1E58F /* ViewController */ = {
+		16AD8D6B27CD199100D1E58F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				16AD8D6927CD16AF00D1E58F /* ContentsViewController.swift */,
+				16AD8D6D27CD1A8300D1E58F /* BreweryTableViewCell.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		16AD8D6C27CD19F800D1E58F /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				16AD8D6E27CD1A8300D1E58F /* BreweryTableViewCell.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +285,7 @@
 			files = (
 				16AD8D3E27CCFE5B00D1E58F /* LaunchScreen.storyboard in Resources */,
 				16AD8D3B27CCFE5B00D1E58F /* Assets.xcassets in Resources */,
+				16AD8D7027CD1A8300D1E58F /* BreweryTableViewCell.xib in Resources */,
 				16AD8D3927CCFE5900D1E58F /* Main.storyboard in Resources */,
 				16AD8D6827CD15F200D1E58F /* ContentsStoryboard.storyboard in Resources */,
 			);
@@ -306,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16AD8D6A27CD16AF00D1E58F /* ContentsViewController.swift in Sources */,
+				16AD8D6F27CD1A8300D1E58F /* BreweryTableViewCell.swift in Sources */,
 				16AD8D3627CCFE5900D1E58F /* ViewController.swift in Sources */,
 				16AD8D3227CCFE5900D1E58F /* AppDelegate.swift in Sources */,
 				16AD8D3427CCFE5900D1E58F /* SceneDelegate.swift in Sources */,
