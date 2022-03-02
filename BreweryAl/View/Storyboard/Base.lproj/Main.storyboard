@@ -25,17 +25,35 @@
                                     <segue destination="bV5-0o-Szy" kind="embed" id="QQV-ND-SkP"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LS0-im-Jxi">
+                                <rect key="frame" x="16" y="32" width="382" height="43"/>
+                                <string key="text">Bem vindo(a)! 
+Encontre as melhores cervejarias</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="udv-Bg-AED">
+                                <rect key="frame" x="16" y="91" width="382" height="51"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LS0-im-Jxi" secondAttribute="trailing" constant="16" id="1eK-M4-LqE"/>
+                            <constraint firstItem="LS0-im-Jxi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5AV-2c-RWV"/>
                             <constraint firstItem="sCa-Wi-KOQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6f3-Ja-gND"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xFW-dW-zZ2" secondAttribute="bottom" id="9sh-cq-XVV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xFW-dW-zZ2" secondAttribute="trailing" id="GBZ-4q-HzG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sCa-Wi-KOQ" secondAttribute="trailing" id="NSH-Lp-k3e"/>
                             <constraint firstItem="sCa-Wi-KOQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OhL-Tn-rA2"/>
                             <constraint firstItem="xFW-dW-zZ2" firstAttribute="top" secondItem="sCa-Wi-KOQ" secondAttribute="bottom" id="Pho-bY-Gi7"/>
+                            <constraint firstItem="udv-Bg-AED" firstAttribute="top" secondItem="LS0-im-Jxi" secondAttribute="bottom" constant="16" id="fcn-EV-4sv"/>
                             <constraint firstItem="xFW-dW-zZ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hpM-Co-QTj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="udv-Bg-AED" secondAttribute="trailing" constant="16" id="k5k-mI-Aeo"/>
+                            <constraint firstItem="LS0-im-Jxi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="nY2-oi-uVe"/>
+                            <constraint firstItem="udv-Bg-AED" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qnQ-rO-nRu"/>
                             <constraint firstItem="sCa-Wi-KOQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="swm-l9-7zT"/>
                         </constraints>
                     </view>
@@ -52,6 +70,9 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="udv-Bg-AED" id="Zf8-4o-iZ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
