@@ -32,7 +32,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Tk2-cj-KOF" firstAttribute="leading" secondItem="bbA-fZ-87K" secondAttribute="leading" constant="16" id="3gb-JD-3BY"/>
                                     <constraint firstAttribute="trailing" secondItem="Tk2-cj-KOF" secondAttribute="trailing" constant="16" id="4hP-Jk-2Tt"/>
@@ -62,7 +63,8 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xbg-D9-ayX">
                                 <rect key="frame" x="16" y="160" width="382" height="702"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcp-ZO-GGj">
                                 <rect key="frame" x="358" y="113.5" width="40" height="40"/>
@@ -79,7 +81,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dcp-ZO-GGj" secondAttribute="trailing" constant="16" id="0I1-LH-MB5"/>
                             <constraint firstItem="Xbg-D9-ayX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="2FF-OV-lE9"/>
@@ -105,7 +107,9 @@
                         <outlet property="errorMessageView" destination="bbA-fZ-87K" id="K1L-CS-eCL"/>
                         <outlet property="resultsLabel" destination="3ht-sk-U4O" id="WHD-Ij-boG"/>
                         <outlet property="searchResultsTableView" destination="Xbg-D9-ayX" id="MyU-Fu-0LM"/>
-                        <outlet property="sortByLabel" destination="Hnx-Yx-IuT" id="zgR-Ww-GBd"/>
+                        <outlet property="sortByButton" destination="Dcp-ZO-GGj" id="nvl-ug-5lY"/>
+                        <outlet property="sortByLabel" destination="Hnx-Yx-IuT" id="cne-A9-63w"/>
+                        <outlet property="titleLabel" destination="tn6-3N-bPe" id="MHi-TP-jAk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -118,8 +122,8 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

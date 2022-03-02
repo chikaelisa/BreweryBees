@@ -16,9 +16,10 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet weak var resultsLabel: UILabel!
     @IBOutlet weak var sortByLabel: UILabel!
     @IBOutlet weak var searchResultsTableView: UITableView!
+    @IBOutlet weak var sortByButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    var model = ["Ademir", "Vila Bar", "Stout", "Cabaré", "As mina", "10 Shots"]
-    
+    var model = [BreweryDefaultModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,22 +29,31 @@ class SearchResultsViewController: UIViewController {
         searchResultsTableView.dataSource = self
         
         searchResultsTableView.register(UINib(nibName: BreweryTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BreweryTableViewCell.identifier)
+        
+        presentCountOrPresentError(model: model)
     }
     
     @IBAction func filterAction(_ sender: Any) {
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func presentCountOrPresentError(model: [BreweryDefaultModel]) {
+        switch model.count {
+        case 0:
+            titleLabel.isHidden = true
+            resultsLabel.isHidden = true
+            sortByLabel.isHidden = true
+            sortByButton.isHidden = true
+            searchResultsTableView.isHidden = true
+            
+            errorMessageView.isHidden = false
+            
+        case 1:
+            resultsLabel.text = "1 resultado"
+            
+        default:
+            resultsLabel.text = "\(model.count) resultados"
+        }
     }
-    */
-
 }
 
 extension SearchResultsViewController: UITableViewDelegate, UITableViewDataSource {

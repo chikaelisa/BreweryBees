@@ -8,10 +8,10 @@
 import UIKit
 
 class BreweryTableViewCell: UITableViewCell {
-
+    
     static let identifier = "BreweryTableViewCell"
     
-   // let model = ["Ademir", "Vila Bar", "Stout", "Cabaré", "As mina", "10 Shots"]
+    // let model = ["Ademir", "Vila Bar", "Stout", "Cabaré", "As mina", "10 Shots"]
     
     @IBOutlet weak var imageBrew: UIImageView!
     @IBOutlet weak var nameBrew: UILabel!
@@ -19,6 +19,8 @@ class BreweryTableViewCell: UITableViewCell {
     @IBOutlet weak var typeBrew: UILabel!
     @IBOutlet weak var distanceBrew: UILabel!
     @IBOutlet weak var isFavoriteButton: UIButton!
+    @IBOutlet weak var principalView: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,11 +30,12 @@ class BreweryTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         imageBrew.layer.cornerRadius = imageBrew.frame.height / 2
+        principalView.layer.cornerRadius = 16
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -41,14 +44,17 @@ class BreweryTableViewCell: UITableViewCell {
     
     
     @IBAction func isFavoriteAction(_ sender: Any) {
+    
     }
     
-    func configureCell(with breweModel: String) {
-        nameBrew.text = breweModel
-        if var firstChar = breweModel.first{
+    func configureCell(with breweModel: BreweryDefaultModel) {
+        nameBrew.text = breweModel.name
+        if var firstChar = breweModel.name?.first{
             firstChar = Character(firstChar.lowercased())
             imageBrew.image = UIImage(systemName: "\(firstChar).circle")
         }
+        typeBrew.text = breweModel.brewery_type
+        rateBrew.text = "\(String(describing: breweModel.average))"
     }
     
     
