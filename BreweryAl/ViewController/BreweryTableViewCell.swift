@@ -54,7 +54,8 @@ class BreweryTableViewCell: UITableViewCell {
             imageBrew.image = UIImage(systemName: "\(firstChar).circle")
         }
         typeBrew.text = breweModel.brewery_type
-        rateBrew.text = "\(String(describing: breweModel.average))"
+        guard let rating = breweModel.average else { return }
+        rateBrew.text = "\(String(describing: rating))"
     }
     
     

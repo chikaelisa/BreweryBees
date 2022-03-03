@@ -71,6 +71,7 @@ Encontre as melhores cervejarias</string>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="containerSearchTableView" destination="xFW-dW-zZ2" id="2m9-Sk-NkZ"/>
                         <outlet property="searchBar" destination="udv-Bg-AED" id="Zf8-4o-iZ8"/>
                     </connections>
                 </viewController>

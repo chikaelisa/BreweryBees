@@ -25,6 +25,8 @@ class SearchResultsViewController: UIViewController {
         super.viewDidLoad()
         self.searchResultsTableView.reloadData()
         
+    
+        
         searchResultsTableView.delegate = self
         searchResultsTableView.dataSource = self
         

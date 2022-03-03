@@ -23,19 +23,19 @@ struct BreweryDefaultModel: Decodable, Equatable {
     var isFavorite : Bool?
     
     
-//    init() {
-//         id = "q"
-//         name = "Ademir"
-//         brewery_type = "barzin"
-//         street = nil
-//         city = nil
-//         state  = nil
-//         website_url = nil
-//         phone = nil
-//        average = 4.5
-//         size_evaluations = nil
-//         photos = nil
-//         isFavorite = nil
-//    }
+    init() {
+        id = "q"
+        name = "Ademir"
+        brewery_type = "barzin"
+        street = nil
+        city = nil
+        state  = nil
+        website_url = nil
+        phone = nil
+        average = 4.5
+        size_evaluations = nil
+        photos = nil
+        isFavorite = nil
+    }
 }
 
