@@ -11,7 +11,7 @@ import UIKit
 class SearchResultsViewController: UIViewController {
     
     static let identifier = "SearchResultViewController"
-
+    
     @IBOutlet weak var errorMessageView: UIView!
     @IBOutlet weak var resultsLabel: UILabel!
     @IBOutlet weak var sortByLabel: UILabel!
@@ -20,24 +20,28 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var model = [BreweryDefaultModel]()
+    var networking = Networking()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.searchResultsTableView.reloadData()
-        
-    
-        
         searchResultsTableView.delegate = self
         searchResultsTableView.dataSource = self
         
         searchResultsTableView.register(UINib(nibName: BreweryTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BreweryTableViewCell.identifier)
         
-        presentCountOrPresentError(model: model)
+        networking.fetchTopTen {  [weak self] result in
+            DispatchQueue.main.async {
+                self?.model = result
+                self?.presentCountOrPresentError(model: self?.model ?? [])
+                self?.searchResultsTableView.reloadData()
+            }
+            
+        }
+        
     }
-    
     @IBAction func filterAction(_ sender: Any) {
     }
-
+    
     func presentCountOrPresentError(model: [BreweryDefaultModel]) {
         switch model.count {
         case 0:

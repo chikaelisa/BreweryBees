@@ -12,7 +12,7 @@ class Networking {
     
     let baseURL: String = "https://bootcamp-mobile-01.eastus.cloudapp.azure.com/breweries"
     
-    func fetchTopTen(completion: @escaping (Array<BreweryDefaultModel>) -> ()) {
+    func fetchTopTen(completion: @escaping ([BreweryDefaultModel]) -> ()) {
         guard let sourceURL = URL(string: "\(baseURL)/topTen")
         else {
             return
@@ -22,8 +22,8 @@ class Networking {
             if let data = data {
                 do {
                     let decoder = JSONDecoder()
-                    let results = try decoder.decode(Array<BreweryDefaultModel>.self, from: data)
-                    print("results", results)
+                    let results = try decoder.decode([BreweryDefaultModel].self, from: data)
+                  //  print("results", results)
                     completion(results)
                 }
                 catch {
